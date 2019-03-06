@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ABF592BC2230219B0095A063 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF592BB2230219B0095A063 /* main.swift */; };
+		ABF592C4223021E60095A063 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABF592C3223021E60095A063 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		ABF592B82230219B0095A063 /* RecursiveProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RecursiveProject; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABF592BB2230219B0095A063 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		ABF592C3223021E60095A063 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		ABF592BA2230219B0095A063 /* RecursiveProject */ = {
 			isa = PBXGroup;
 			children = (
-				ABF592BB2230219B0095A063 /* main.swift */,
+				ABF592C3223021E60095A063 /* main.cpp */,
 			);
 			path = RecursiveProject;
 			sourceTree = "<group>";
@@ -94,6 +94,7 @@
 				TargetAttributes = {
 					ABF592B72230219B0095A063 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -119,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABF592BC2230219B0095A063 /* main.swift in Sources */,
+				ABF592C4223021E60095A063 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,8 +245,16 @@
 		ABF592C02230219B0095A063 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecursiveProject/RecursiveProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -253,8 +262,15 @@
 		ABF592C12230219B0095A063 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecursiveProject/RecursiveProject-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
